@@ -1,10 +1,18 @@
-﻿namespace ConfApp.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ConfApp.Models;
 
 public class Customer
 {
-    int CustomerId {  get; set; }
+    [Key]
+    public int CustomerId {  get; set; }
     public string  Name { get; set; }
     public string Address { get; set; }
     public string City { get; set; }
     public string  State { get; set; }
+
+    public Customer()
+    {
+        
+    }
 }

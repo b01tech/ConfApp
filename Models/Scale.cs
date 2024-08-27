@@ -1,9 +1,12 @@
 ﻿using ConfApp.Models.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace ConfApp.Models;
 
 public class Scale
 {
+    [Key]
+    public int ScaleId { get; set; }
     public string  TagName { get; set; }
     public string  Model { get; set; }
     public string  SerialNo { get; set; }
@@ -12,4 +15,9 @@ public class Scale
     public double ResolutionD { get; set; }
     public double  ResolutionE { get; set; }
     public Unit Unit { get; set; }
+
+    public Scale()
+    {
+        
+    }
 }
